@@ -34,3 +34,98 @@ int x;
 cout << "Type a number: "; //type a number and press enter
 cin >> x; //get user input from keyboard
 cout << "Your number is: " << x; //display the input value
+
+String Concatenation:
+The + operator can be used between strings to add them together to make a new string. This is called concatenation:
+string fullname = firstname + " " + lastname;
+A string in C++ is actually an object, which contains functions that can perform certain operations on strings. For
+example, you can also concatenate strings with the append() function:
+string fullname = firstname.append(lastname); //this one has no space between
+
+String length:
+xxxx.length() or xxxx.size() //they are the same thing
+
+Access Strings:
+//print the first character in myString:
+cout << myString[0]; //outputs H
+
+Change String Characters:
+To change the value of a specific character in a string, refer to the index number, and use single quotes:
+string myString = "Hello";
+myString[0] = 'J';
+cout << myString;
+//outputs Jello instead of Hello
+
+Omitting Namespace
+the using namespace std line can be omitted and replaced with the std keyword, folowed by the :: operator for string (and cout) objects:
+std::string greeting = "Hello";
+std::cout << greeting;
+
+C++ <cmath> Header //this is the C++ math library
+used for functions such as sqrt, round, log, min, max, etc.
+#include <cmath>
+
+Boolean Values:
+Example:
+bool isCodingFun = true;
+bool isFishTasty = false;
+cout << isCodingFun; //outputs 1 (true)
+cout << isFishTasty; //outputs 0 (false)
+Example:
+int x = 10, y = 9;
+cout << (x > y); //returns 1
+
+Short Hand if/else (Ternary Operator):
+There is a short-hand if/else, which is known as the ternary operator because it consists of three operands.
+It can be used to replace multiple lines of code with a single line. It is often used to replace simpel if/else statements.
+Syntax:
+variable = (condition) ? expressionTrue : expressionFalse;
+Example (if/else):
+int time = 20;
+if(time < 18)
+    cout << "Good Day";
+else
+    cout << "Good Evening";
+Example (Ternary Operator):
+int time = 20;
+string result = (time < 18) ? "Good Day" : "Good Evening";
+cout << result; //im not sure, but you could probs just cout << the thing rather than making another variable
+
+C++ Switch Statements:
+Use the switch statement to select one of many code blocks to be executed
+Syntax:
+switch(expression){
+    case x:
+        //code block
+        break;
+    case y:
+        //code block
+        break;
+    default:
+        //code block
+        break;
+}
+
+C++ While Loop:
+The while loop loops through a block of code as long as a specified condition is true:
+Syntax:
+while(condition){
+    //code block to be executed
+}
+
+The Do/While Loop;
+The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the
+condition is true, then it will repeat the loop as long as the condition is true. The loop will always be executed
+at least once, even if the condition is false, because the code block is executed before the condition is tested.
+Syntax:
+do{
+    //code block to be executed
+}
+while(condition);
+
+The For loop:
+When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop
+Example:
+for(int i = 0; i < 5; i++){
+    cout << i << "\n";
+}
